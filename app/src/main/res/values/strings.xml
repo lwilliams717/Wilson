@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Wilson</string>
+    <string name="home">Home</string>
+    <string name="community">Community</string>
+    <string name="chat">Contacts</string>
+    <string name="profile">Profile</string>
+    <string name="company">Wilson</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="based_on_your">Based on Your Data, We Recommend</string>
+    <string name="learn">Learn More about Golf</string>
+    <string name="swing_data">Check out Your Swing Data</string>
+    <string name="todays">Today\'s Game</string>
+    <string name="past">Past Games</string>
+    <string name="check_in">Check-ins</string>
+    <string name="view_data">View All Data</string>
+
+</resources>

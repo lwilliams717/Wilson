@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_act"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:contentDescription="@string/company"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:requiresFadingEdge="horizontal"/>
+
+        <ScrollView
+            android:id="@+id/scrollview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_image">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="83dp"
+                    android:layout_height="83dp"
+                    android:layout_marginStart="164dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="164dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/profile_skill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Skill Level: Beginner"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/profile_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Sally Doe"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/profile_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:background="@drawable/widget_shape"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Bio: lorem ipsum dolor" />
+
+                <ImageView
+                    android:id="@+id/profile_my_gear"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/widget_shape"
+                    android:elevation="3dp"
+                    android:foregroundGravity="center"
+                    android:padding="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/multiple_clubs" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/widget_shape"
+                    android:elevation="3dp"
+                    android:padding="10dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_shape"
+                            android:backgroundTint="@color/white"
+                            android:padding="15dp"
+                            android:text="@string/todays"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button4"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/button_shape"
+                            android:padding="15dp"
+                            android:text="@string/past"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_shape"
+                            android:padding="15dp"
+                            android:text="@string/check_in"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button3"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/button_shape"
+                            android:padding="15dp"
+                            android:text="@string/view_data"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
