@@ -13,5 +13,6 @@
     <string name="past">Past Games</string>
     <string name="check_in">Check-ins</string>
     <string name="view_data">View All Data</string>
+    <string name="smart">Smart Club</string>
 
 </resources>

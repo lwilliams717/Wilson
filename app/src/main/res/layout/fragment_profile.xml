@@ -35,7 +35,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
 
                 <ImageView
                     android:id="@+id/profile_pic"
@@ -97,7 +98,9 @@
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/widget_shape"
                     android:elevation="3dp"
-                    android:padding="10dp">
+                    android:padding="10dp"
+
+                    >
 
                     <TableRow
                         android:layout_width="match_parent"

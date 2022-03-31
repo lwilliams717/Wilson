@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,8 +39,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     CommunityFragment secondFragment = new CommunityFragment();
     ChatFragment thirdFragment = new ChatFragment();
     ProfileFragment fourthFragment = new ProfileFragment();
+    SmartClubFragment fifthFragment = new SmartClubFragment();
+    SmartClubFragment2 sixthFragment = new SmartClubFragment2();
 
-
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -59,6 +62,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_act, fourthFragment).commit();
                 return true;
+
+            case R.id.smart:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_act, fifthFragment).commit();
+                return true;
         }
         return false;
     }
@@ -70,6 +77,36 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void onClickBrow(View view) {
         openBrowser("https://www.wilson.com/en-us/blog/golf");
     }
+
+    //change head colors
+    public void onClickRed(View view){
+        SmartClubFragment.onClickRed(view);
+    }
+    public void onClickBlack(View view){
+        SmartClubFragment.onClickBlack(view);
+    }
+    public void onClickBlue(View view){
+        SmartClubFragment.onClickBlue(view);
+    }
+    //change grip colors
+    public void onClickOrangeGrip(View view){
+        SmartClubFragment2.onClickOrangeGrip(view);
+    }
+    public void onClickBlueGrip(View view){
+        SmartClubFragment2.onClickBlueGrip(view);
+    }
+    public void onClickRedGrip(View view){
+        SmartClubFragment2.onClickRedGrip(view);
+    }
+
+    public void switchFragForward(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_act, sixthFragment).commit();
+    }
+    public void switchFragBackward(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_act, fifthFragment).commit();
+    }
+
+
 
     public void openBrowser(String url){
         Intent intent = new Intent();

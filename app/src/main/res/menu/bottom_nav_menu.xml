@@ -9,6 +9,10 @@
         android:title="@string/community"
         android:icon="@drawable/golf_ball"/>
     <item
+        android:id="@+id/smart"
+        android:icon="@drawable/golf_club_icon"
+        android:title="@string/smart" />
+    <item
         android:id="@+id/chat"
         android:title="@string/chat"
         android:icon="@drawable/messaging" />
