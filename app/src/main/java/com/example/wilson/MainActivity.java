@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     ProfileFragment fourthFragment = new ProfileFragment();
     SmartClubFragment fifthFragment = new SmartClubFragment();
     SmartClubFragment2 sixthFragment = new SmartClubFragment2();
+    StoryFragment seventhFragment = new StoryFragment();
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -78,6 +79,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         openBrowser("https://www.wilson.com/en-us/blog/golf");
     }
 
+    //onclick for story feature
+    public void onClickStory(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_act, seventhFragment).commit();
+    }
+    public void onClickStoryOff(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_act, secondFragment).commit();
+    }
+
+
     //change head colors
     public void onClickRed(View view){
         SmartClubFragment.onClickRed(view);
@@ -105,8 +115,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void switchFragBackward(View view){
         getSupportFragmentManager().beginTransaction().replace(R.id.main_act, fifthFragment).commit();
     }
-
-
 
     public void openBrowser(String url){
         Intent intent = new Intent();
